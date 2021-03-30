@@ -60,6 +60,7 @@ void workFunction_0(char *s) {
   i = ++i + 2;       // undefined behavior until C++11
   i = i++ + 2;       // undefined behavior until C++17
   tmpFunc(i = -2, i = -2); // undefined behavior until C++17
+  tmpFunc(i = 2, i++-2);
   tmpFunc(++i, ++i);       // undefined behavior until C++17,
                    // unspecified after C++17
 i = ++i + i++;     // undefined behavior
