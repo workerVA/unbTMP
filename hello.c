@@ -33,7 +33,7 @@ char tmpFunction1(char * buf)
   return buf[1];
 }
 
-char tmpFunction4(char * buf)
+char tmpFunction2(char * buf)
 {
   buf[2]=buf[1] + buf[2] + buf[3];
   return buf[2];
