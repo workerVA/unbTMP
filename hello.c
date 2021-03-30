@@ -40,7 +40,7 @@ char tmpFunction2(char * buf)
 }
 char tmpFunction3(char * buf)
 {
-  globalBuff = buf;
+  globalBuff = buf+1;
   return buf[2];
 }
 char tmpFunction4(char * buf)
