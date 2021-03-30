@@ -56,19 +56,19 @@ void workFunction_0(char *s) {
   buf[intA] = intA++;
   intA++;
   buf[intA] = intA;
-  int i;
+  int i,j;
   i = ++i + 2;       // undefined behavior until C++11
   i = i++ + 2;       // undefined behavior until C++17
   tmpFunc(i = -2, i = -2); // undefined behavior until C++17
   tmpFunc(++i, ++i);       // undefined behavior until C++17,
                    // unspecified after C++17
 i = ++i + i++;     // undefined behavior
-cout << i << i++; // undefined behavior until C++17
+//cout << i << i++; // undefined behavior until C++17
 buf[i] = i++;       // undefined behavior until C++17
 n = ++i + i;      // undefined behavior
   buf[i]=++i;
 buf[i++] = i;
-j = i + X[++i];
+j = i + buf[++i];
 i = 6 + i++ + 2000;
 j = i++ + ++i;
 i = ++i + ++i;
