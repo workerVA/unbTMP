@@ -56,7 +56,7 @@ void workFunction_0(char *s) {
   buf[intA] = intA++;
   intA++;
   buf[intA] = intA;
-  int i,j;
+  int i,j,n;
   i = ++i + 2;       // undefined behavior until C++11
   i = i++ + 2;       // undefined behavior until C++17
   tmpFunc(i = -2, i = -2); // undefined behavior until C++17
