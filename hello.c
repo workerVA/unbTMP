@@ -90,4 +90,5 @@ i = ++i + ++i;
   
   int x = f(1) + f(2);
  tmpFunc(tmpFunction3(buf),tmpFunction4(buf));
+ for(i=0;buf[i]<10;i++);
 }
