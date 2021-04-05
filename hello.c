@@ -26,6 +26,7 @@ struct buffers
 
 unsigned char * globalBuff;
 unsigned char * globalBuffN;
+unsigned char globalBuffArr[10]
   
 char tmpFunction1(char * buf)
 {
@@ -46,6 +47,16 @@ char tmpFunction3(char * buf)
 char tmpFunction4(char * buf)
 {
   globalBuff = buf;
+  return buf[2];
+}
+char tmpFunction3_1(char * buf)
+{
+  globalBuffArr[1] = 1;
+  return buf[2];
+}
+char tmpFunction4_1(char * buf)
+{
+  globalBuffArr[1] = 0;
   return buf[2];
 }
 char tmpFunction5(char * buf)
@@ -70,7 +81,17 @@ char tmpFunction8(char * buf)
   memcpy(buf,globalBuffN,2);
   return buf[2];
 }
+char tmpFunction7_1(char * buf)
+{
+  memcpy(globalBuffArr,buf+1,2);
+  return buf[1];
+}
 
+char tmpFunction8_1(char * buf)
+{
+  memcpy(globalBuffArr,buf,2);
+  return buf[2];
+}
 void workFunction_0(char *s) {
   int intA,intB,intC;
   char buf[80];
@@ -101,6 +122,8 @@ i = ++i + ++i;
   
   int x = f(1) + f(2);
  tmpFunc(tmpFunction3(buf),tmpFunction4(buf));
+ tmpFunc(tmpFunction3_1(buf),tmpFunction4_1(buf));
  for(i=0;buf[i]<10;i++);
  i = tmpFunction7(buf) + tmpFunction8(buf);
+ i = tmpFunction7_1(buf) + tmpFunction8_1(buf);
 }
